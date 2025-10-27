@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from 'express';
 
 // Minimal mock auth to attach a user for demo/testing
 export function mockAuth(req: Request, _res: Response, next: NextFunction) {

@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { prisma } from '../prisma.js';
 import { memeSchema } from '../schemas/meme.js';
 import type { Meme } from '../types/index.js';
