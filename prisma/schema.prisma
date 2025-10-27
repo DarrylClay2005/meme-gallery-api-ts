@@ -1,0 +1,20 @@
+// Prisma schema
+// Run migrations on a supported environment: `npx prisma migrate dev --name init`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Meme {
+  id        Int     @id @default(autoincrement())
+  title     String
+  url       String
+  userId    Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
